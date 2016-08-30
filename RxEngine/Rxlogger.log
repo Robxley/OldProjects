@@ -1,0 +1,49 @@
+  ========================================
+   RxEngine - Logger File - OPEN 
+  ========================================
+
+------------[RxSDLOpenglContext][InitSDLGL] INIT SDL : OK !
+------------[RxSDLOpenglContext] OpenGL Core :  3.3.0 NVIDIA 372.54 - (GLSL 3.30 NVIDIA via Cg compiler)
+------------[RxEngine] START
+<WARNING>---[RxShader][BindAllAttribLocation] default -- FILE <e:\rxenginegl3 v1.0\rxengine\scr\rxshader.cpp> -- LINE <249>
+------------[RxShader][Load]Shader -> [VERT] : shaders/item2d.vert -> [FRAG] : shaders/item2d.frag
+------------[RxEngine][Init] start
+------------[RxEngine][InitGraphicObjects] start
+------------[RxTexManager][LoadTex] Texture : data/skybox/1/XN.jpg
+------------[RxTexManager][LoadTex] Texture : data/skybox/1/XP.jpg
+------------[RxTexManager][LoadTex] Texture : data/skybox/1/ZN.jpg
+------------[RxTexManager][LoadTex] Texture : data/skybox/1/ZP.jpg
+------------[RxTexManager][LoadTex] Texture : data/skybox/1/YN.jpg
+------------[RxTexManager][LoadTex] Texture : data/skybox/1/YP.jpg
+<WARNING>---[RxShader][BindAllAttribLocation] default -- FILE <e:\rxenginegl3 v1.0\rxengine\scr\rxshader.cpp> -- LINE <249>
+------------[RxShader][Load]Shader -> [VERT] : Shaders/skybox.vert -> [FRAG] : Shaders/skybox.frag
+<WARNING>---[RxShader][BindAllAttribLocation] default -- FILE <e:\rxenginegl3 v1.0\rxengine\scr\rxshader.cpp> -- LINE <249>
+------------[RxShader][Load]Shader -> [VERT] : Shaders/texture.vert -> [FRAG] : Shaders/texture.frag
+------------[RxTexManager][LoadTex] Texture : data/texture.png
+------------[RxTexManager][LoadTex] Texture : data/terre.jpg
+------------[RxFont][GenerateGlTexture] Loaded Font :defaut.ttf
+<WARNING>---[RxShader][BindAllAttribLocation] default -- FILE <e:\rxenginegl3 v1.0\rxengine\scr\rxshader.cpp> -- LINE <249>
+------------[RxShader][Load]Shader -> [VERT] : shaders/font.vert -> [FRAG] : shaders/font.frag
+------------[RxTexManager][LoadTex] Texture : data/texture3.jpg
+------------[RXFBO][CheckError] None 
+------------[RxTexManager][LoadTex] Texture : data/Crackles0004_S.jpg
+------------[RxTexManager][CreateArrayTex] ArrayTexture : arrayTextureHeightMap
+<WARNING>---[RxShader][BindAllAttribLocation] default -- FILE <e:\rxenginegl3 v1.0\rxengine\scr\rxshader.cpp> -- LINE <249>
+------------[RxShader][Load]Shader -> [VERT] : shaders/hterrain3.vert -> [FRAG] : shaders/hterrain3.frag
+<WARNING>---[RxShader][BindAllAttribLocation] default -- FILE <e:\rxenginegl3 v1.0\rxengine\scr\rxshader.cpp> -- LINE <249>
+------------[RxShader][Load]Shader -> [VERT] : shaders/geometry.vert -> [FRAG] : shaders/geometry.frag
+------------[RxAssimpLoader][Open3DFile] : Import of scene : data/models/animation/zombie/zombie.b3d.
+------------[RxTexManager][LoadTex] Texture : data/models/animation/zombie/Zombie.jpg
+<WARNING>---[RxMesh][CenterDataToOrigin]  Bounding Box no valide -- FILE <e:\rxenginegl3 v1.0\rxengine\scr\rxmesh.cpp> -- LINE <457>
+<WARNING>---[RxShader][BindAllAttribLocation] default -- FILE <e:\rxenginegl3 v1.0\rxengine\scr\rxshader.cpp> -- LINE <249>
+------------[RxShader][Load]Shader -> [VERT] : Shaders/animmesh.vert -> [FRAG] : Shaders/animmesh.frag
+------------[RxAssimpLoader][Open3DFile] : Import of scene : data/models/animation/zombie/zombie.b3d.
+------------[RxEngine][InitGraphicObjects] end
+------------[RxEngine][Loop] Start Loop
+------------[RxTexManager][Destroy] ok
+------------[RxEngine] END
+
+  ========================================
+   RxEngine - Logger File - CLOSE 
+  ========================================
+

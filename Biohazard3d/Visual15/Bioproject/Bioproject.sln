@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Biohazard3d", "Biohazard3d\Biohazard3d.vcxproj", "{EDDF765C-7A26-41B1-AEBA-E228951B00E5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Biotests", "Biotests\Biotests.vcxproj", "{CF03F454-7D54-4F90-BE27-C190F2678289}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EDDF765C-7A26-41B1-AEBA-E228951B00E5} = {EDDF765C-7A26-41B1-AEBA-E228951B00E5}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tinygame", "Tinygame\Tinygame.vcxproj", "{D89DBFC5-2B0B-4595-84AD-62F36BF52C74}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EDDF765C-7A26-41B1-AEBA-E228951B00E5} = {EDDF765C-7A26-41B1-AEBA-E228951B00E5}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDDF765C-7A26-41B1-AEBA-E228951B00E5}.Debug|x64.ActiveCfg = Debug|x64
+		{EDDF765C-7A26-41B1-AEBA-E228951B00E5}.Debug|x64.Build.0 = Debug|x64
+		{EDDF765C-7A26-41B1-AEBA-E228951B00E5}.Debug|x86.ActiveCfg = Debug|Win32
+		{EDDF765C-7A26-41B1-AEBA-E228951B00E5}.Debug|x86.Build.0 = Debug|Win32
+		{EDDF765C-7A26-41B1-AEBA-E228951B00E5}.Release|x64.ActiveCfg = Release|x64
+		{EDDF765C-7A26-41B1-AEBA-E228951B00E5}.Release|x64.Build.0 = Release|x64
+		{EDDF765C-7A26-41B1-AEBA-E228951B00E5}.Release|x86.ActiveCfg = Release|Win32
+		{EDDF765C-7A26-41B1-AEBA-E228951B00E5}.Release|x86.Build.0 = Release|Win32
+		{CF03F454-7D54-4F90-BE27-C190F2678289}.Debug|x64.ActiveCfg = Debug|x64
+		{CF03F454-7D54-4F90-BE27-C190F2678289}.Debug|x64.Build.0 = Debug|x64
+		{CF03F454-7D54-4F90-BE27-C190F2678289}.Debug|x86.ActiveCfg = Debug|Win32
+		{CF03F454-7D54-4F90-BE27-C190F2678289}.Debug|x86.Build.0 = Debug|Win32
+		{CF03F454-7D54-4F90-BE27-C190F2678289}.Release|x64.ActiveCfg = Release|x64
+		{CF03F454-7D54-4F90-BE27-C190F2678289}.Release|x64.Build.0 = Release|x64
+		{CF03F454-7D54-4F90-BE27-C190F2678289}.Release|x86.ActiveCfg = Release|Win32
+		{CF03F454-7D54-4F90-BE27-C190F2678289}.Release|x86.Build.0 = Release|Win32
+		{D89DBFC5-2B0B-4595-84AD-62F36BF52C74}.Debug|x64.ActiveCfg = Debug|x64
+		{D89DBFC5-2B0B-4595-84AD-62F36BF52C74}.Debug|x64.Build.0 = Debug|x64
+		{D89DBFC5-2B0B-4595-84AD-62F36BF52C74}.Debug|x86.ActiveCfg = Debug|Win32
+		{D89DBFC5-2B0B-4595-84AD-62F36BF52C74}.Debug|x86.Build.0 = Debug|Win32
+		{D89DBFC5-2B0B-4595-84AD-62F36BF52C74}.Release|x64.ActiveCfg = Release|x64
+		{D89DBFC5-2B0B-4595-84AD-62F36BF52C74}.Release|x64.Build.0 = Release|x64
+		{D89DBFC5-2B0B-4595-84AD-62F36BF52C74}.Release|x86.ActiveCfg = Release|Win32
+		{D89DBFC5-2B0B-4595-84AD-62F36BF52C74}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

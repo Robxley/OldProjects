@@ -1,0 +1,157 @@
+<rxscene name = "level 1"> <!-- Nom d'itentification de la carte -->
+
+<texturelist> <!-- Debut d'instruction de l'enumeration des textures � charger -->
+
+
+	<texture filename="data/sand.jpg" id="1"/>
+	
+	<texture filename="data/herbe.jpg" id="2"/>
+	
+	<texture filename="data/cailloux.jpg" id="3"/>
+	
+	<!--<texture filename="data/color_map.jpg" id="4" />
+-->
+	<multitexture  name="multi1" id="4">
+		<texture filename="data/cailloux.jpg"/>
+		<texture filename="data/herbe.jpg"/>
+		<texture filename="data/sand.jpg"/>
+	</multitexture>
+	
+</texturelist>
+
+
+<itemlist> <!-- Debut d'instruction de l'�numeration des objets � charger -->
+
+   	 <itemdefault  idtex="4" idshader="0" />
+
+	<waterplane equation="0.0 1.0 0.0 10.0" id="1"/>
+ 
+    
+	<cube size="7.5 0.5 40.0" idtex="3" id="2" />
+	
+	
+	<mesh filename="data/rollingstone.obj" scale="4.0, 3.0, 4.0" idtex="1" id="3"/>
+	 
+<cube size="120.0 0.5 20.0" idtex="3" id="4"/>
+	 
+<cube size="20.0 0.5 120.0" idtex="1" id="5"/>
+	 
+<cube size="4.0 3.0 4.0" idtex="2" id="6"/>
+    
+</itemlist>
+
+
+<datalist>
+
+	
+
+	<!-- plateforme 1-->
+	<trajectory type="vertex" id ="1">
+	 0.0 4.0 270.0
+ 	 0.0 4.0 270.0
+	 0.0 4.0 370.0 
+	 0.0 4.0 370.0
+	 </trajectory>
+	 
+	 <!-- plateforme 2-->
+	<trajectory type="vertex" id ="2">
+	 0.0 4.0 520.0
+	 0.0 4.0 520.0
+ 	 20.0 4.0 500.0
+	 40.0 4.0 480.0
+	 60.0 4.0 500.0
+	 80.0 4.0 520.0
+	 100.0 4.0 500.0
+	 120.0 4.0 480.0
+	 140.0 4.0 500.0
+	 160.0 4.0 520.0
+	 180.0 4.0 500.0
+	 200.0 4.0 480.0
+	 220.0 4.0 500.0
+	 230.0 4.0 520.0
+	 230.0 4.0 520.0
+	 </trajectory>
+	 
+
+	 <!-- plateforme 3-->
+	<trajectory type="vertex" id ="3">
+	 325.0 4.0 185.0
+ 	 325.0 4.0 185.0
+	 325.0 4.0 280.0 325.0 4.0 280.0
+	 </trajectory>
+</datalist>
+
+
+<actorlist>
+    <actordefault mass="30.0" celastic="0.0" sfriction ="1.0" dfriction="1.0" position ="40.0, 20.0, 40.0" quat="0.0, 0.0, 0.0, 1.0"  group="0" />
+
+   <dynamic id="1" iditem="1" />
+ 
+    
+   <!--kinematic id="2" iditem="2" position="-30.0, 5.0, -30.0" />
+-->
+   
+   
+ <kinematic id="3" iditem="3" mode="1" trajectory="1" velocity ="0.1" position="0.0, 0.5, 0.0"/>
+ <!-- plateforme 1-->
+   
+<kinematic id="4" iditem="6" mode="1" trajectory="2" velocity ="0.1" position="0.0, 4.5, 0.0"/>
+ <!-- plateforme 2-->
+   
+<kinematic id="5" iditem="3" mode="1" trajectory="3" velocity ="0.1" position="0.0, 0.5, 0.0"/>
+ <!-- plateforme 3-->
+ 
+ 
+<!--
+ 
+ <kinematic id="3" iditem="3" mode="1" trajectory="1" velocity ="0.1" position="0.0, 0.5, 0.0"  approx="cylinder: 5.5, 1.0, 5.5, 16 "/>
+   
+<kinematic id="4" iditem="6" mode="1" trajectory="2" velocity ="0.1" position="0.0, 4.5, 0.0" approx="capsule: 2.0 3.0"/>
+   
+<kinematic id="5" iditem="3" mode="1" trajectory="3" velocity ="0.1" position="0.0, 0.5, 0.0"  approx="cylinder: 5.5, 1.0, 5.5, 16 "/>
+ 
+ 
+-->
+ 
+<kinematic iditem="3" position="-5.0, 8.0, 10.0"/>
+ 
+ <kinematic iditem="2" position="0.0, 4.0, 20.0"/>
+ <kinematic iditem="2" position="0.0, 4.0, 120.0"/>
+ <kinematic iditem="2" position="0.0, 4.0, 220.0"/>
+ <kinematic iditem="2" position="0.0, 4.0, 420.0"/>
+ <kinematic iditem="4" position="110.0, 4.0, 500.0"/>
+
+</actorlist>
+
+
+
+<scene>
+
+    
+<gllight trajectory="0" id="1"> <!-- la lumi�re peut �tre mobile -->
+            <ambient color="0.5, 0.5, 0.5, 1.0" />
+            <diffuse color="0.5, 0.5, 0.5, 1.0" />
+            <specular color="0.8, 0.5, 0.5, 1.0" />
+            <position position="20.0, -30.0, 0.5, 1.0" />
+            <attenuation constant ="0.5" linear="0.0" quadratic="0.0002" />
+   </gllight>
+    
+    <!-- active les ombres pour les acteurs id actors -->
+    <shadow enable="1" color="0.1, 0.1, 0.1, 0.5" idlights="1" />
+
+ 
+    <skybox>
+            <front filename="data/skybox/1/ZP.bmp"/>
+            <back filename="data/skybox/1/ZN.bmp"/>
+            <left filename="data/skybox/1/XP.bmp" />
+            <right filename="data/skybox/1/XN.bmp" />
+            <top filename="data/skybox/1/YP.bmp" />
+            <bottom filename="data/skybox/1/YN.bmp" />
+    </skybox>
+    
+</scene>
+
+
+</rxscene>
+
+

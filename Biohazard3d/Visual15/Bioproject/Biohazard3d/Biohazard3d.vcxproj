@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EDDF765C-7A26-41B1-AEBA-E228951B00E5}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Biohazard3d</RootNamespace>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(SolutionDir)..\..\Biohazard3d\include;$(SolutionDir)..\..\dependencies\visualcpp\SDL2\include;$(SolutionDir)..\..\dependencies\visualcpp\assimp\include;$(SolutionDir)..\..\dependencies\visualcpp\glew\include;$(SolutionDir)..\..\dependencies\common\glm;$(IncludePath)</IncludePath>
+    <OutDir>$(HOMEDRIVE)\temp\$(SolutionName)\$(PlatformTarget)\$(Configuration)\</OutDir>
+    <LibraryPath>$(SolutionDir)..\..\dependencies\visualcpp\lib\$(PlatformTarget);$(LibraryPath)</LibraryPath>
+    <IntDir>$(OutDir)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(SolutionDir)..\..\Biohazard3d\include;$(SolutionDir)..\..\dependencies\visualcpp\SDL2\include;$(SolutionDir)..\..\dependencies\visualcpp\assimp\include;$(SolutionDir)..\..\dependencies\visualcpp\glew\include;$(SolutionDir)..\..\dependencies\common\glm;$(IncludePath)</IncludePath>
+    <OutDir>$(HOMEDRIVE)\temp\$(SolutionName)\$(PlatformTarget)\$(Configuration)\</OutDir>
+    <LibraryPath>$(SolutionDir)..\..\dependencies\visualcpp\lib\$(PlatformTarget);$(LibraryPath)</LibraryPath>
+    <IntDir>$(OutDir)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(SolutionDir)..\..\Biohazard3d\include;$(SolutionDir)..\..\dependencies\visualcpp\SDL2\include;$(SolutionDir)..\..\dependencies\visualcpp\assimp\include;$(SolutionDir)..\..\dependencies\visualcpp\glew\include;$(SolutionDir)..\..\dependencies\common\glm;$(IncludePath)</IncludePath>
+    <OutDir>$(HOMEDRIVE)\temp\$(SolutionName)\$(PlatformTarget)\$(Configuration)\</OutDir>
+    <LibraryPath>$(SolutionDir)..\..\dependencies\visualcpp\lib\$(PlatformTarget);$(LibraryPath)</LibraryPath>
+    <IntDir>$(OutDir)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(SolutionDir)..\..\Biohazard3d\include;$(SolutionDir)..\..\dependencies\visualcpp\SDL2\include;$(SolutionDir)..\..\dependencies\visualcpp\assimp\include;$(SolutionDir)..\..\dependencies\visualcpp\glew\include;$(SolutionDir)..\..\dependencies\common\glm;$(IncludePath)</IncludePath>
+    <OutDir>$(HOMEDRIVE)\temp\$(SolutionName)\$(PlatformTarget)\$(Configuration)\</OutDir>
+    <LibraryPath>$(SolutionDir)..\..\dependencies\visualcpp\lib\$(PlatformTarget);$(LibraryPath)</LibraryPath>
+    <IntDir>$(OutDir)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Biohazard3d\include\AnimMesh.hpp" />
+    <ClInclude Include="..\..\..\Biohazard3d\include\Assertion.hpp" />
+    <ClInclude Include="..\..\..\Biohazard3d\include\AssimpLoader.hpp" />
+    <ClInclude Include="..\..\..\Biohazard3d\include\BoundingBox.hpp" />
+    <ClInclude Include="..\..\..\Biohazard3d\include\Common.hpp" />
+    <ClInclude Include="..\..\..\Biohazard3d\include\Cube.hpp" />
+    <ClInclude Include="..\..\..\Biohazard3d\include\Engine.hpp" />
+    <ClInclude Include="..\..\..\Biohazard3d\include\Face.hpp" />
+    <ClInclude Include="..\..\..\Biohazard3d\include\File.hpp" />
+    <ClInclude Include="..\..\..\Biohazard3d\include\Font.hpp" />
+    <ClInclude Include="..\..\..\Biohazard3d\include\Fps.hpp" />
+    <ClInclude Include="..\..\..\Biohazard3d\include\GLContext.hpp" />
+    <ClInclude Include="..\..\..\Biohazard3d\include\GLErrorLogger.hpp" />
+    <ClInclude Include="..\..\..\Biohazard3d\include\Logger.hpp" />
+    <ClInclude Include="..\..\..\Biohazard3d\include\Material.hpp" />
+    <ClInclude Include="..\..\..\Biohazard3d\include\Mesh.hpp" />
+    <ClInclude Include="..\..\..\Biohazard3d\include\MultiPlatformOpenGL.hpp" />
+    <ClInclude Include="..\..\..\Biohazard3d\include\PerlinNoise.hpp" />
+    <ClInclude Include="..\..\..\Biohazard3d\include\ResourceManager.hpp" />
+    <ClInclude Include="..\..\..\Biohazard3d\include\SDLAssimpIO.hpp" />
+    <ClInclude Include="..\..\..\Biohazard3d\include\SDLGLContext.hpp" />
+    <ClInclude Include="..\..\..\Biohazard3d\include\SDLSmart.hpp" />
+    <ClInclude Include="..\..\..\Biohazard3d\include\SDLTextureManager.hpp" />
+    <ClInclude Include="..\..\..\Biohazard3d\include\Shader.hpp" />
+    <ClInclude Include="..\..\..\Biohazard3d\include\Sphere.hpp" />
+    <ClInclude Include="..\..\..\Biohazard3d\include\StuffMath.hpp" />
+    <ClInclude Include="..\..\..\Biohazard3d\include\Texture.hpp" />
+    <ClInclude Include="..\..\..\Biohazard3d\include\VBO.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Biohazard3d\src\AnimMesh.cpp" />
+    <ClCompile Include="..\..\..\Biohazard3d\src\AssimpLoader.cpp" />
+    <ClCompile Include="..\..\..\Biohazard3d\src\BoundingBox.cpp" />
+    <ClCompile Include="..\..\..\Biohazard3d\src\Cube.cpp" />
+    <ClCompile Include="..\..\..\Biohazard3d\src\Engine.cpp" />
+    <ClCompile Include="..\..\..\Biohazard3d\src\File.cpp" />
+    <ClCompile Include="..\..\..\Biohazard3d\src\Font.cpp" />
+    <ClCompile Include="..\..\..\Biohazard3d\src\Fps.cpp" />
+    <ClCompile Include="..\..\..\Biohazard3d\src\GLContext.cpp" />
+    <ClCompile Include="..\..\..\Biohazard3d\src\GLErrorLogger.cpp" />
+    <ClCompile Include="..\..\..\Biohazard3d\src\Logger.cpp" />
+    <ClCompile Include="..\..\..\Biohazard3d\src\Material.cpp" />
+    <ClCompile Include="..\..\..\Biohazard3d\src\Mesh.cpp" />
+    <ClCompile Include="..\..\..\Biohazard3d\src\PerlinNoise.cpp" />
+    <ClCompile Include="..\..\..\Biohazard3d\src\SDLAssimpIO.cpp" />
+    <ClCompile Include="..\..\..\Biohazard3d\src\SDLGLContext.cpp" />
+    <ClCompile Include="..\..\..\Biohazard3d\src\SDLTextureManager.cpp" />
+    <ClCompile Include="..\..\..\Biohazard3d\src\Shader.cpp" />
+    <ClCompile Include="..\..\..\Biohazard3d\src\Sphere.cpp" />
+    <ClCompile Include="..\..\..\Biohazard3d\src\StuffMath.cpp" />
+    <ClCompile Include="..\..\..\Biohazard3d\src\Texture.cpp" />
+    <ClCompile Include="..\..\..\Biohazard3d\src\VBO.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

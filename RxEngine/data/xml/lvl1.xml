@@ -1,0 +1,118 @@
+<rxscene name = "level 1"> <!-- Nom d'itentification de la carte -->
+
+<texturelist> <!-- Debut d'instruction de l'enumeration des textures � charger -->
+
+
+	<texture filename="data/sand.jpg" id="1"/>
+	
+	<texture filename="data/herbe.jpg" id="2"/>
+	
+	<texture filename="data/cailloux.jpg" id="3"/>
+	
+	<!--<texture filename="data/color_map.jpg" id="4" />
+-->
+	<multitexture  name="multi1" id="4">
+		<texture filename="data/cailloux.jpg"/>
+		<texture filename="data/herbe.jpg"/>
+		<texture filename="data/sand.jpg"/>
+		<texture filename="data/cailloux.jpg"/>
+	</multitexture>
+	
+</texturelist>
+
+
+<itemlist> <!-- Debut d'instruction de l'�numeration des objets � charger -->
+
+   	 <itemdefault  idtex="4" idshader="0" />
+
+  	<waterplane equation="0.0 1.0 0.0 0.0" id="1"/>
+    
+	<heightmap filename="data/lvl2.png" scale="5.0, 0.04, 5.0" idtex="4" id="2" />
+	
+	<!--<cube size="5.0 2.0 5.0" idtex="4" id="3" />
+-->
+	
+	<mesh filename="data/rollingstone.obj" scale="2.5, 2.0, 2.5" idtex="4" id="3"/>
+	 
+    
+</itemlist>
+
+
+<datalist>
+
+	
+
+	<!-- plateforme 1-->
+	<trajectory type="vertex" id ="1">
+	 20.0 4.0 110.0
+ 20.0 4.0 110.0
+	 20.0 4.0 220.0 20.0 4.0 220.0
+	 </trajectory>
+	 
+	 <!-- plateforme 2-->
+	<trajectory type="vertex" id ="2">
+	 265.0 4.0 115.0
+ 265.0 4.0 115.0
+	 145.0 4.0 115.0 145.0 4.0 115.0
+	 </trajectory>
+	 
+
+	 <!-- plateforme 3-->
+	<trajectory type="vertex" id ="3">
+	 325.0 4.0 185.0
+ 325.0 4.0 185.0
+	 325.0 4.0 280.0 325.0 4.0 280.0
+	 </trajectory>
+</datalist>
+
+
+<actorlist>
+    <actordefault mass="30.0" celastic="0.0" sfriction ="1.0" dfriction="1.0" position ="40.0, 20.0, 40.0" quat="0.0, 0.0, 0.0, 1.0"  group="0" />
+
+    <dynamic id="1" iditem="1" />
+    
+   <dynamic id="2" iditem="2" position="0.0, -5.0, 0.0" />
+   
+   
+   <kinematic id="3" iditem="3" mode="1" trajectory="1" velocity ="0.5" position="0.0, 0.5, 0.0"/>
+ <!-- plateforme 1-->
+   
+<kinematic id="4" iditem="3" mode="1" trajectory="2" velocity ="0.5" position="0.0, 0.5, 0.0"/>
+ <!-- plateforme 2-->
+   
+<kinematic id="5" iditem="3" mode="1" trajectory="3" velocity ="0.5" position="0.0, 0.5, 0.0"/>
+ <!-- plateforme 3-->
+</actorlist>
+
+
+
+<scene>
+
+    
+<gllight trajectory="0" id="1"> <!-- la lumi�re peut �tre mobile -->
+            <ambient color="0.2, 0.2, 0.2, 1.0" />
+            <diffuse color="0.5, 0.5, 0.5, 1.0" />
+            <specular color="0.5, 0.5, 0.5, 1.0" />
+            <position position="1.0, -1.0, 0.5, 1.0" />
+            <attenuation constant ="0.5" linear="0.0" quadratic="0.0002" />
+   </gllight>
+    
+    <!-- active les ombres pour les acteurs id actors -->
+    <shadow enable="1" color="0.1, 0.1, 0.1, 0.5" idactors="3 4 5" idlights="1" />
+
+ 
+    <skybox>
+            <front filename="data/skybox/1/ZP.bmp"/>
+            <back filename="data/skybox/1/ZN.bmp"/>
+            <left filename="data/skybox/1/XP.bmp" />
+            <right filename="data/skybox/1/XN.bmp" />
+            <top filename="data/skybox/1/YP.bmp" />
+            <bottom filename="data/skybox/1/YN.bmp" />
+    </skybox>
+    
+</scene>
+
+
+</rxscene>
+
+

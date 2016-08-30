@@ -1,0 +1,185 @@
+<rxgui name = "GUI1"> <!-- Nom d'itentification de la carte -->
+
+<texturelist> <!-- Debut d'instruction de l'enumeration des textures � charger -->
+
+
+	<texture filename="data/sand.jpg" id="1"/>
+	
+	<texture filename="data/herbe.jpg" id="2"/>
+	
+	<texture filename="data/cailloux.jpg" id="3"/>
+	
+	<!--<texture filename="data/color_map.jpg" id="4" />
+-->
+	<multitexture  name="multi1" id="4">
+		<texture filename="data/cailloux.jpg"/>
+		<texture filename="data/herbe.jpg"/>
+		<texture filename="data/sand.jpg"/>
+	</multitexture>
+	
+</texturelist>
+
+
+<itemlist>
+
+	
+
+	<!-- valeurs par defaut qui seront attribuée au objet suivant l'instruction en cas d'omission d'une instruction-->
+
+
+	<default>
+
+		<position value="20 30"/> <!--position (x,y) de l'objet à l'écran-->
+
+		<size value="100 30"/>	  <!--dimension de l'objet (w,h) -->
+
+		<states visible="1" movable="1" outside="1"/> <!--Etat de l'objet : visible, fixe/movible, peut sortir du cadre-->
+
+		<color value="1.0 1.0 1.0"/> <!-- couleur (r,g,b) de l'objet-->
+
+		<texture id="1"/>  <!--texture de l'objet-->
+
+		<text value="my text" position="5 5" color="1.0 1.0 1.0" /> <!-- texte de l'objet , position du texte sur l'objet, couleur du texte-->
+
+	</default>
+
+
+	<!-- model pour un objet simple-->
+
+	<item2d name ="item1">
+		<!--ensemble des paramétres commun à chaque objet-->	
+
+		<position vec2="20 30"/> <!--position (x,y) de l'objet à l'écran-->
+
+		<size vec2="100 30"/>	  <!--dimension de l'objet (w,h) -->
+
+		<state visible="1" movable="1" outside="1"/> <!--Etat de l'objet : visible, fixe/movible, peut sortir du cadre-->
+
+		<color vec3="1.0 1.0 1.0"/> <!-- couleur (r,g,b) de l'objet-->
+
+		<texture id="1"/>  <!--texture de l'objet-->
+
+		<text value="my text" position="5 5" color="1.0 1.0 1.0" /> <!-- texte de l'objet , position du texte sur l'objet, couleur du texte-->
+
+	</item2d>
+
+	
+
+	<!-- model pour un bouton-->
+
+	<button name="button1">
+
+		<!--ensemble des paramétres commun à chaque objet-->	
+
+		<position vec2="20 30"/> <!--position (x,y) de l'objet à l'écran-->
+
+		<size vec2="100 30"/>	  <!--dimension de l'objet (w,h) -->
+
+		<state visible="1" movable="1" outside="1"/> <!--Etat de l'objet : visible, fixe/movible, peut sortir du cadre-->
+
+		<color vec3="1.0 1.0 1.0"/> <!-- couleur (r,g,b) de l'objet-->
+
+		<texture id="1"/>  <!--texture de l'objet-->
+
+		<text value="my text" position="5 5" color="1.0 1.0 1.0" /> <!-- texte de l'objet , position du texte sur l'objet, couleur du texte-->
+
+		
+
+		<!--ensemble des paramétres spécifique aux boutons - paramétres optionnelles-->
+
+		
+
+		<!--changement d'état du bouton en fonction de la souries-->
+
+		<!-- out : souris hors de l'objet-->
+
+		<!-- onup : souris sur l'objet et bouton de la souris relevé-->
+
+		<!-- ondown : souris sur l'objet et bouton de la souris enfoncé-->
+
+		
+
+		<mousetexture out="1" onup="2" ondown="3"/> 
+
+		<mousecolor out="1.0 1.0 1.0" onup="1.0 1.0 1.0" ondown="1.0 1.0 1.0" />
+
+		<mousetext out="my text" onup="my text2" ondown="my text3" />
+
+	</button>
+
+	
+
+	<textbox name="textbox1">
+
+	
+	<!--ensemble des paramétres commun à chaque objet-->	
+
+		<position vec2="20 30"/> <!--position (x,y) de l'objet à l'écran-->
+
+		<size vec2="100 30"/>	  <!--dimension de l'objet (w,h) -->
+
+		<state visible="1" movable="1" outside="1"/> <!--Etat de l'objet : visible, fixe/movible, peut sortir du cadre-->
+
+		<color vec3="1.0 1.0 1.0"/> <!-- couleur (r,g,b) de l'objet-->
+
+		<texture id="1"/>  <!--texture de l'objet-->
+
+		<text value="my text" position="5 5" color="1.0 1.0 1.0" /> <!-- texte de l'objet , position du texte sur l'objet, couleur du texte-->
+
+		
+
+		<!--ensemble des paramétres spécifique aux boutons - paramétres optionnelles-->
+
+		
+
+		<!-- texte affiché dans la textbox (si non déclaré affiche le texte de l'instruction <text value="my text"/> -->
+
+		<boxtext>
+
+			my text
+
+		</boxtext>
+
+		<scroll speed="1.0"/> <!--vitesse de défilement du  texte-->
+
+		<border size="5"/>	
+		
+
+		
+
+		<!--bouton de defilement du texte. utilisation des mêmes instructions que les boutons présentés ci dessus-->
+
+		<buttonup>
+
+				<!-- parametres bouton-->
+
+		</buttonup>
+
+		
+
+		<buttondown>
+
+				<!-- parametres bouton-->
+
+		</buttondown>
+
+		
+
+		<buttonscroll>
+
+				<!-- parametres bouton-->
+
+		</buttonscroll>
+
+		
+
+		
+
+	</textbox>
+
+</itemlist>
+
+
+</rxgui>
+
+

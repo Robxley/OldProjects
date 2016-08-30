@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4C074542-9763-48C8-BD5F-CFB6FED26058}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>RxEngine</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <ExecutablePath>$(ProjectDir)ressources\bin;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(ProjectDir)ressources\include;$(ProjectDir)include;$(IncludePath);$(ProjectDir)ressources\include\assimp</IncludePath>
+    <LibraryPath>$(ProjectDir)ressources\lib;$(ProjectDir)ressources\lib\debug;$(ProjectDir)ressources\bin;$(LibraryPath)</LibraryPath>
+    <ReferencePath>$(ProjectDir)ressources\bin;$(ReferencePath)</ReferencePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>
+    </LinkIncremental>
+    <ExecutablePath>$(ProjectDir)ressources\bin;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(ProjectDir)ressources\include;$(ProjectDir)include;$(ProjectDir)ressources\glm-0.9.2.7;$(IncludePath);$(ProjectDir)ressources\include\assimp</IncludePath>
+    <LibraryPath>$(ProjectDir)ressources\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;SDL2_ttf.lib;SDL2_image.lib;SDL2.lib;SDL2main.lib;tinyxmld.lib;libnoise.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>LIBCMTD</IgnoreSpecificDefaultLibraries>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+    <CustomBuildStep>
+      <Inputs>$(ProjectDir)Shaders;$(ProjectDir)ressources\bin;%(Inputs)</Inputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opengl32.lib;SDL2_ttf.lib;SDL2_image.lib;SDL2.lib;SDL2test.lib;SDL2main.lib;tinyxml.lib;libnoise.lib;assimp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>LIBCMTD</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <CustomBuildStep>
+      <Inputs>$(ProjectDir)Shaders;$(ProjectDir)ressources\bin;%(Inputs)</Inputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ressources\src\gl3w.c" />
+    <ClCompile Include="ressources\src\noiseutils.cpp" />
+    <ClCompile Include="scr\main.cpp" />
+    <ClCompile Include="scr\RxAnimMesh.cpp" />
+    <ClCompile Include="scr\RxAssimpLoader.cpp" />
+    <ClCompile Include="scr\RxCulling.cpp" />
+    <ClCompile Include="scr\RxEngine.cpp" />
+    <ClCompile Include="scr\RxCamera.cpp" />
+    <ClCompile Include="scr\RxFBO.cpp" />
+    <ClCompile Include="scr\RxFile.cpp" />
+    <ClCompile Include="scr\RxFont.cpp" />
+    <ClCompile Include="scr\RxFPS.cpp" />
+    <ClCompile Include="scr\RxGUI.cpp" />
+    <ClCompile Include="scr\RxHeightMap.cpp" />
+    <ClCompile Include="scr\RxLogger.cpp" />
+    <ClCompile Include="scr\RxMath3D.cpp" />
+    <ClCompile Include="scr\RxMesh.cpp" />
+    <ClCompile Include="scr\RxObject3D.cpp" />
+    <ClCompile Include="scr\RxProceduralTexture.cpp" />
+    <ClCompile Include="scr\RxQuadTree.cpp" />
+    <ClCompile Include="scr\RxShader.cpp" />
+    <ClCompile Include="scr\RxSimpleMesh.cpp" />
+    <ClCompile Include="scr\RxSkyBox.cpp" />
+    <ClCompile Include="scr\RxTexManager.cpp" />
+    <ClCompile Include="scr\RxTools.cpp" />
+    <ClCompile Include="scr\RxTreeStruct.cpp" />
+    <ClCompile Include="scr\RxVBO.cpp" />
+    <ClCompile Include="scr\RxWindow.cpp" />
+    <ClCompile Include="tests.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\RxAnimMesh.h" />
+    <ClInclude Include="include\RxAssimpLoader.h" />
+    <ClInclude Include="include\RxConst.h" />
+    <ClInclude Include="include\RxCulling.h" />
+    <ClInclude Include="include\RxEngine.h" />
+    <ClInclude Include="include\RxCamera.h" />
+    <ClInclude Include="include\RxFBO.h" />
+    <ClInclude Include="include\RxFile.h" />
+    <ClInclude Include="include\RxFont.h" />
+    <ClInclude Include="include\RxFPS.h" />
+    <ClInclude Include="include\RxGUI.h" />
+    <ClInclude Include="include\RxHeightMap.h" />
+    <ClInclude Include="include\RxLogger.h" />
+    <ClInclude Include="include\RxMath3D.h" />
+    <ClInclude Include="include\RxMesh.h" />
+    <ClInclude Include="include\RxObject3D.h" />
+    <ClInclude Include="include\RxProceduralTexture.h" />
+    <ClInclude Include="include\RxQuadTree.h" />
+    <ClInclude Include="include\RxShader.h" />
+    <ClInclude Include="include\RxSimpleMesh.h" />
+    <ClInclude Include="include\RxSingleton.h" />
+    <ClInclude Include="include\RxSkyBox.h" />
+    <ClInclude Include="include\RxTexManager.h" />
+    <ClInclude Include="include\RxTools.h" />
+    <ClInclude Include="include\RxTreeStruct.h" />
+    <ClInclude Include="include\RxVBO.h" />
+    <ClInclude Include="include\RxWindow.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="tests.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Rxlogger.log" />
+    <None Include="Shaders\animmesh.frag" />
+    <None Include="Shaders\animmesh.vert" />
+    <None Include="Shaders\basique.frag" />
+    <None Include="Shaders\basique.vert" />
+    <None Include="Shaders\basique_2D.vert" />
+    <None Include="Shaders\couleurs.frag" />
+    <None Include="Shaders\couleurs.vert" />
+    <None Include="Shaders\couleurs_2D.vert" />
+    <None Include="Shaders\font.frag" />
+    <None Include="Shaders\font.vert" />
+    <None Include="Shaders\geometry.frag" />
+    <None Include="Shaders\geometry.vert" />
+    <None Include="Shaders\hterrain3.frag" />
+    <None Include="Shaders\hterrain3.vert" />
+    <None Include="Shaders\item2d.frag" />
+    <None Include="Shaders\item2d.vert" />
+    <None Include="Shaders\shadowquad.frag" />
+    <None Include="Shaders\shadowquad.vert" />
+    <None Include="Shaders\shadowvolume.frag" />
+    <None Include="Shaders\shadowvolume.vert" />
+    <None Include="Shaders\skybox.frag" />
+    <None Include="Shaders\skybox.vert" />
+    <None Include="Shaders\texture.frag" />
+    <None Include="Shaders\texture.vert" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

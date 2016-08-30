@@ -1,0 +1,155 @@
+<rxscene name = "sample"> <!-- Nom d'itentification de la carte -->
+
+<texturelist> <!-- Debut d'instruction de l'enumeration des textures � charger -->
+
+    <!-- chargement d'une texture par son emplacement sur le disque : "filename" -->
+    <!-- et lui assigne un identificateur id  -->
+    <texture filename="/texture0.jpg" id="1"/>
+    <texture filename="/texture1.jpg" id="2"/>
+    <multitexture name="multi1" id="3" format="2 2">
+    	<1 filename="texture1.jpg"/>
+    	<2 filename="texture2.jpg"/>
+    	<3 filename="texture3.jpg"/>
+    	<4 filename="texture4.jpg"/>
+    </multitexture>
+
+</texturelist>
+<shaderlist>
+    <!-- chargement du shader � partir du fichier shader1.frag et shader1.vert -->
+    <shader filefrag="/shader1.frag" filevert="/shader1.vert" fileuniform ="shader1.unif" id="1" />
+    <shader file="/shader2.sha" id="1" />
+</shaderlist>
+
+<itemlist> <!-- Debut d'instruction de l'�numeration des objets � charger -->
+
+    <!-- instruction commune au objet suivant la declartion de itemdefault  -->
+    <!-- par consequent il n'est pas necessaire de redefinir ces parametres dans la declaration d'un objet -->
+    <!-- position : definit la position spatiale de l'objet -->
+    <!-- quat : definit l'orientation spatiale de l'objet par un quaternion -->
+    <!-- idtex : definit la texture assignae a l'objet par son id -->
+    <!-- idshader : definit le shader utilise pour afficher l'objet (0 : shader desactiver) -->
+
+    <itemdefault  idtex="0" idshader="0" />
+
+    <!-- description des differents objet3d -->
+
+
+    <!-- creation d'un plan d'equation ax + by +cz + d=0 -->
+    <!-- id : repr�sente la cl� d'identification d'un objet -->
+    <plane equation="0.0, 0.0, 0.0, 0.0" idtex="1 2" idshader="0" id="1" />
+
+    <!-- Creation d'une sphere de rayon radius -->
+    <sphere radius="1.0"  idtex="1 2" idshader="0" id="2" />
+
+    <!-- Creation d'un cube de dimension size -->
+    <cube size="1.0, 1.0, 1.0"  idtex="1 2" idshader="0" id="3" />
+
+    <!-- Creation d'une capsule de rayon radius et hauteur height -->
+    <capsule radius="1.0" height="1.0" idtex="1 2" idshader="0" id="4" />
+
+    <!-- Creation d'un objet � partir du fichier mymesh.obj et redimensionn� par size -->
+    <mesh filename="/mymesh.obj" normalise="0" scale="1.0, 1.0, 1.0" idtex="1 2" idshader="0" id="5" />
+
+    <mesh filename="/mymesh.dae" normalise="0" scale="1.0, 1.0, 1.0" idtex="1 2" idshader="0" id="6" />
+
+    
+    <!-- Creation d'une heightmap � partir du fichier image myheightmap.jpg et redimentionn�e par size -->
+    <!-- listidtex represente la liste des textures formants notre heightmap -->
+    <heightmap filename="/myheightmap.jpg" scale="1.0, 1.0, 1.0" idtex="1 2 1 1" idshader="0" id="6" />
+    <!-- Creation d'une heightmap à partir de la generation d'un bruit de perlin -->
+    <heightmap perlin="perlin" scale="1.0, 1.0, 1.0" width="32" height="32" max_level="255" min_level="0" nb_octave="4" step="-1" smooth="3" persistance="0.5" idtex="1 2 1 1" idshader="0" id="6" />
+    <!-- Creation d'une heightmap à partir de la generation d'un bruit -->
+    <heightmap random="random" scale="1.0, 1.0, 1.0" width="32" height="32" max_level="255" min_level="0" smooth="3" idtex="1 2 1 1" idshader="0" id="6" />
+
+
+  <waterplane equation="0.0, 1.0, 0.0, 0.0" idshader="0" id="1" />
+</itemlist>
+
+<!-- definis la liste des acteurs utilisees par PhysX -->
+<actorlist>
+    <!-- definit un groupe d'appartenance -->
+   
+    <!-- semblabe � itemdefault, permet de definir par defaut des parametres communs aux acteurs d�clar�s apres cette instruction -->
+    <!-- mass : masse par defaut des acteurs -->
+    <!-- celastic, sfriction, dfirction : coefficients de r�stitution d'�nergie respectivement �lastique, friction statique, friction dynamique -->
+    
+    <!-- approx :approxime l'acteur par l'une des formes simples suivantes : -->
+    <!--  approx="cube: 1.0, 1.0, 1.0"  : approxime par un cube de dimension 1.0, 1.0, 1.0-->
+    <!--  approx="sphere: 1.0"  : approxime par une sphere de rayon 1.0 -->
+    <!--  approx="capsule: 1.0, 1.0"  : approxime par un capsule de rayon 1.0 et de hauteur 1.0-->
+    <!--  approx="cylinder: 1.0, 1.0, 1.0, 16 "  : approxime par un cylindre de dimension 1.0, 1.0, 1.0 et de précision 16-->
+    <!-- approx="Convex: filename data.txt " : approxime par un convexe dont les sommets sont sauvegardées dans le fichier data.txt"-->
+    <!-- approx="Convex: datalist id" : approxime par une convexe dont le sommets sont sauvegardées dans data-->
+    <!-- Si Approx n'est pas spécifié alors on prend par defaut la forme correspondante à l'item ou dans le cas d'un mesh son cubebox-->
+    <actordefault mass="1.0" celastic="0.5" sfriction ="1.0" dfriction="1.0" position ="0.0, 0.0, 0.0" quat="0.0, 0.0, 0.0, 1.0"  group="0" approx="cube: 1.0, 1.0, 1.0" />
+
+    <!-- declaration d'un acteur simple associee a l'objet iditem -->
+    <!-- id optionel-->
+    <dynamic id="1" iditem="1" mass="1.0" celastic="0.5" sfriction ="1.0" dfriction="1.0" position ="0.0, 0.0, 0.0" quat="0.0, 0.0, 0.0, 1.0" group="0" approx="cube: 1.0, 1.0, 1.0"/>
+
+    <static id="1" iditem="1" mass="1.0" celastic="0.5" sfriction ="1.0" dfriction="1.0" position ="0.0, 0.0, 0.0" quat="0.0, 0.0, 0.0, 1.0" group="0" approx="cube: 1.0, 1.0, 1.0"/>
+
+    <!-- declaration d'un acteur kinematic associ�e � l'objet iditem et de trajectoir la suite de vertex definis par trajectory -->
+    <!-- si trajectory == 0 , definission d'un objet static-->
+    <!--mode : type de trajectoire-->
+    <!--		0 : boucle --> 
+    <!--		1: aller - retour -->
+    <!-- smooth : permet de lisser les points de trajectory.-->  <!-- A DEFINIR -->
+    <!-- 		B-n : interpolation b-spline par n points entre chaque vertexs-->
+    <!-- 		H-n : interpolation hermissien par n points entre chaque vertexs -->
+    <!-- 		0 :aucune interpolation -->
+    <!-- position  : represente l'offset ajouter à tous les points formant la trajectoire du kinematic -->
+    <kinematic id="2"  iditem="2" trajectory="0" mode="0" smooth="B-10" velocity="1.0" mass="1.0" celastic="0.5" sfriction ="1.0" dfriction="1.0" position ="0.0, 0.0, 0.0" quat="0.0, 0.0, 0.0, 1.0" group="0" approx="cube: 1.0, 1.0, 1.0"/>
+
+    <!-- declaration d'un acteur type character-->
+    <!-- filechara : fichier de description du comportement du character --> <!-- A DEFINIR -->
+    <character id="3" iditem="3" filechara="mychara.ch" velocity="0.03" mass="1.0" celastic="0.5" sfriction ="1.0" dfriction="1.0" position ="0.0, 0.0, 0.0" quat="0.0, 0.0, 0.0, 1.0" group="0" approx="cube: 1.0, 1.0, 1.0"/>
+   
+</actorlist>
+
+<datalist>  <!-- structure contenant des donn�es divers (liste de vertex, suite -->
+    <trajectory type="file" filename="trajectory.txt" id = "1" />
+    <trajectory type="vertex" id ="2"> 0.0 1.0 2.0   3.0 4.0 5.0   6.0 7.0 8.0 </trajectory>
+
+</datalist>
+
+<scene>
+    <!-- ajout de lumiere opengl -->
+    <gllight trajectory="0" id="0"> <!-- la lumi�re peut �tre mobile -->
+            <ambient color="0.5,0.5,0.5,1.0" />
+            <diffuse color="0.5,0.5,0.5,1.0" />
+            <specular color="0.5,0.5,0.5,1.0" />
+            <position position="0.0,0.0,0.0,0.0" />
+            <attenuation constant ="0.5" linear="0.0" quadratic="0.0002" />
+    </gllight>
+    <skybox>
+            <front filename="front.jpg"/>
+            <back filename="back.jpg"/>
+            <left filename="left.jpg" />
+            <right filename="right.jpg" />
+            <top filename="top.jpg" />
+            <bottom filename="bottom.jpg" />
+    </skybox>
+    
+    <!-- active les ombres pour les acteurs id actors -->
+    <shadow enable="0" idactors="1 2 3 4" idlights="1 2 3" />
+    <!-- definition du type de camera utilisé dans la scène -->
+    <!-- mode : free, fixe, pursuit -->
+    <!-- idactor : est utilisé avec le mode poursuite et fixe -->
+    <camera mode="free" position="0.0, 0.0, 0.0" direction="0.0, 0.0, 0.0" idactor ="1" />
+ 
+    
+</scene>
+
+<game>
+
+	<gravity value="0.0 -9.8 0.0"/>
+	<startpoint point="0.0 0.0 0.0"/>
+	<endpoint point="0.0 0.0 0.0"/>
+	<character>
+		<velocity value="1.0"/>
+		<jump value="5.0"/>
+	</character>
+	
+</game>
+</rxscene>

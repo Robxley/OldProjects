@@ -1,0 +1,100 @@
+<rxscene name = "test1"> <!-- Nom d'itentification de la carte -->
+
+<texturelist> <!-- Debut d'instruction de l'enumeration des textures � charger -->
+
+    <texture filename="data/texture.jpg" id="1"/>
+	
+<texture filename="data/sand.jpg" id="2"/>
+	
+<texture filename="data/herbe.jpg" id="3"/>
+	
+<texture filename="data/cailloux.jpg" id="4"/>
+	
+</texturelist>
+
+
+<itemlist> <!-- Debut d'instruction de l'�numeration des objets � charger -->
+
+    <itemdefault  idtex="0" idshader="0" />
+    <cube size="1.0, 2.0, 1.0"  idtex="1" id="1" />
+    <sphere radius="3.0" idtex="2" id="2" />
+    
+ <mesh filename="data/cube.obj" idtex="2" id="4" />
+    
+ 
+<capsule radius="1" height="3" id="3" idtex="1" />
+    
+<capsule radius="1" height="3" id="6" idtex="2" />
+    
+<capsule radius="1" height="3" id="7" idtex="3" />
+   
+
+  
+  <waterplane equation="0.0 1.0 0.0 0.0" id="10"/>
+    
+<heightmap filename="data/minimap.jpg" scale="10.0, 1.0, 10.0" idtex="2 3 4" id="5" />
+    
+</itemlist>
+
+
+<datalist>
+
+	<trajectory type="vertex" id ="1"> 0.0 1.0 2.0  3.0 4.0 5.0   6.0 7.0 8.0  9.0 10.0 11.0 12.0 12.0 14.0 17.0 18.0 18.0 </trajectory>
+
+	<trajectory type="vertex" id ="2"> 10.0f, 8.0f, 10.0f,
+					20.0f, 15.0f, 30.0f,
+					25.0f, 8.0f, 25.0f,
+					35.0f, 10.0f, 10.0f,
+					35.0f, 15.0f, 25.0f,
+					30.0f, 15.0f, 20.0f,
+					 30.0f, 23.0f, 12.0f,
+					 70.0f, 23.0f, 80.0f </trajectory>
+
+</datalist>
+
+
+<actorlist>
+    <actordefault mass="30.0" celastic="0.0" sfriction ="1.0" dfriction="1.0" position ="40.0, 20.0, 40.0" quat="0.0, 0.0, 0.0, 1.0"  group="0" />
+
+    <dynamic iditem="1" />
+
+   <dynamic iditem="2" position="30.0, 20.0, 30.0" />
+	
+
+   <dynamic iditem="3" position="20.0, 20.0, 20.0" />
+   
+
+   <dynamic iditem="4" position="15.0, 20.0, 20.0" />
+
+   
+   <dynamic iditem="5"  position="-1.0, -1.0, -1.0" />
+   
+   <dynamic iditem="10" />  
+   
+   
+   <kinematic iditem="3" trajectory="2" mode="1" />
+   <kinematic iditem="1" trajectory="1" />
+</actorlist>
+
+
+<scene>
+    <!-- ajout de lumiere opengl -->
+    <gllight trajectory="0" id="1"> <!-- la lumi�re peut �tre mobile -->
+            <ambient color="0.5,0.5,0.5,1.0" />
+            <diffuse color="0.5,0.5,0.5,1.0" />
+            <specular color="0.5,0.5,0.5,1.0" />
+            <position position="100.0,100.0,100.0,0.0" />
+            <attenuation constant ="0.5" linear="0.0" quadratic="0.0002" />
+    </gllight>
+
+    
+    <!-- active les ombres pour les acteurs id actors -->
+    <shadow enable="1"  />
+
+ 
+    
+</scene>
+
+</rxscene>
+
+

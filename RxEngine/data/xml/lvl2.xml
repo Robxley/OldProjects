@@ -1,0 +1,125 @@
+<rxscene name = "level 1"> <!-- Nom d'itentification de la carte -->
+
+<texturelist> <!-- Debut d'instruction de l'enumeration des textures � charger -->
+
+
+	<texture filename="data/sand.jpg" id="1"/>
+	<texture filename="data/herbe.jpg" id="2"/>
+	<texture filename="data/cailloux.jpg" id="3"/>
+	<texture filename="data/color_map.jpg" id="10"/>
+	<texture filename="data/bigmap.png" id="11"/>
+
+	<arraytexture name="arraytextureterrain" id="4">
+		<texture filename="data/cailloux.jpg"/>
+		<texture filename="data/herbe.jpg"/>
+		<texture filename="data/sand.jpg"/>
+	</arraytexture>
+	
+</texturelist>
+
+
+<itemlist> <!-- Debut d'instruction de l'�numeration des objets � charger -->
+
+   	 <itemdefault  idtex="1" idshader="0" />
+
+	<waterplane equation="0.0 1.0 0.0 1.0" id="1"/>
+  <heightmap filename="data/HeightMap.jpg" scale="5.0, 0.4, 5.0" idtex="4" id="2" />
+  <!--heightmap perlin="perlin" scale="5.0, 0.4, 5.0" width="16" max_level="100" idtex="4" id="2" /-->
+	<mesh filename="data/models/OBJ/rollingstone.obj" scale="2.0, 0.2, 2.0" normalise="1" idtex="10" id="3"/>
+	<mesh filename="data/models/collada/nawak1.dae" scale="1.0, 1.0, 1.0" normalise="1" id="4"/>
+	<!--mesh filename="data/models/collada/creatures/Minidragon.dae" scale="2.0, 2.0, 2.0" normalise="1" id="4"/>
+	<!--<mesh filename="data/models/collada/nawak1.dae" scale="2.0, 0.2, 2.0" normalise="1" idtex="10" id="3"/>
+	
+-->
+	
+	<sphere size="0.5"  id="5"/>
+
+-->
+
+
+	 
+</itemlist>
+
+
+<datalist>
+
+	
+	<!-- plateforme 1-->
+	<trajectory type="vertex" id ="1">
+	-10.0 0.0 2.0
+	-6.0 0.0 6.0
+	0.0 0.0 8.0
+	6.0 0.0 6.0
+	10.0 0.0 2.0
+	8.0 0.0 -6.0
+	4.0 0.0 -8.0
+	0.0 0.0 -4.0
+	-4.0 0.0 -4.0
+	-8.0 0.0 -2.0
+
+	 </trajectory>
+	 
+</datalist>
+
+
+<actorlist>
+	 <actordefault mass="10.0" celastic="0.0" sfriction ="1.0" dfriction="1.0" position ="40.0, 20.0, 40.0" quat="0.0, 0.0, 0.0, 1.0"  group="0" />
+    
+  	<!--plateforme mobile-->
+	<kinematic iditem="3" mode="0" trajectory="1" velocity ="0.01" position="0.0, 10.0, 0.0" name="plateforme1"/>
+   
+	
+ <!-- water -->
+	<dynamic iditem="1" name="water"/>
+	<!--terrain-->
+	<dynamic iditem="2" name="terrain" position="-175.0, -30.0, -175.0"/>
+  <!--dynamic iditem="2" name="terrain" /-->
+  
+  
+  
+	<static iditem="4" name="nawak" position="10.0, 5.0, 0.0"/>
+ 
+
+	<static iditem="5" name="light" position="0.0, 11.0, 0.0"/>
+
+<!--objet static-->
+<!--
+<static iditem="7" position="0.0, 8.0, 0.0" name="5"/>-->
+
+
+</actorlist>
+
+
+
+<scene>
+
+    
+<gllight trajectory="0" id="1"> 
+            <ambient color="0.7, 0.7, 0.7, 1.0" />
+            <diffuse color="0.9, 0.9, 0.9, 1.0" />
+            <specular color="0.9, 0.9, 0.9, 1.0" />
+            <!--<position position="0.0, 10.0, 0.0, 1.0" />
+-->
+             <position position="1.0, -1.0, 0.5, 0.0" />
+            <attenuation constant ="0.5" linear="0.1" quadratic="0.02" />
+   </gllight>
+    
+    <!-- active les ombres pour les acteurs id actors -->
+   <shadow enable="0" color="0.1, 0.1, 0.1, 0.7" idlights="1" mappingsize="2048" />
+
+ 
+    <skybox>
+            <front filename="data/skybox/1/ZP.bmp"/>
+            <back filename="data/skybox/1/ZN.bmp"/>
+            <left filename="data/skybox/1/XP.bmp" />
+            <right filename="data/skybox/1/XN.bmp" />
+            <top filename="data/skybox/1/YP.bmp" />
+            <bottom filename="data/skybox/1/YN.bmp" />
+    </skybox>
+    
+</scene>
+
+
+</rxscene>
+
+

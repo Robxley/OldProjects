@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Fichiers de ressources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Opengl">
+      <UniqueIdentifier>{cfd4ca65-45ef-44e0-a927-7e082d61985c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Opengl">
+      <UniqueIdentifier>{a15ebcc3-deee-41fc-9680-88db6893c783}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Utilitaires">
+      <UniqueIdentifier>{39f8144b-1e05-4daa-8763-8edae21cab4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Utilitaires">
+      <UniqueIdentifier>{052f5545-25d4-424a-adc3-a790b57cc0e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{04206b32-907a-473a-88d6-c9010f57a97c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Externe">
+      <UniqueIdentifier>{2f26995c-1ced-44e5-8725-455dd24fcfcc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="scr\RxShader.cpp">
+      <Filter>Fichiers sources\Opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\RxFile.cpp">
+      <Filter>Fichiers sources\Utilitaires</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\RxLogger.cpp">
+      <Filter>Fichiers sources\Utilitaires</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\RxMath3D.cpp">
+      <Filter>Fichiers sources\Utilitaires</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\RxCamera.cpp">
+      <Filter>Fichiers sources\Opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\main.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\RxEngine.cpp">
+      <Filter>Fichiers sources\Opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\RxFPS.cpp">
+      <Filter>Fichiers sources\Utilitaires</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\RxTexManager.cpp">
+      <Filter>Fichiers sources\Opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\RxTools.cpp">
+      <Filter>Fichiers sources\Utilitaires</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\RxMesh.cpp">
+      <Filter>Fichiers sources\Opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\RxSimpleMesh.cpp">
+      <Filter>Fichiers sources\Opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\RxObject3D.cpp">
+      <Filter>Fichiers sources\Opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\RxTreeStruct.cpp">
+      <Filter>Fichiers sources\Utilitaires</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\RxFont.cpp">
+      <Filter>Fichiers sources\Utilitaires</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\RxWindow.cpp">
+      <Filter>Fichiers sources\Opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\RxGUI.cpp">
+      <Filter>Fichiers sources\Opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\RxFBO.cpp">
+      <Filter>Fichiers sources\Opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\RxHeightMap.cpp">
+      <Filter>Fichiers sources\Opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\RxQuadTree.cpp">
+      <Filter>Fichiers sources\Utilitaires</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\RxProceduralTexture.cpp">
+      <Filter>Fichiers sources\Utilitaires</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\RxSkyBox.cpp">
+      <Filter>Fichiers sources\Opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="ressources\src\gl3w.c">
+      <Filter>Fichiers sources\Externe</Filter>
+    </ClCompile>
+    <ClCompile Include="ressources\src\noiseutils.cpp">
+      <Filter>Fichiers sources\Externe</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\RxCulling.cpp">
+      <Filter>Fichiers sources\Opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="tests.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\RxVBO.cpp">
+      <Filter>Fichiers sources\Opengl</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\RxAssimpLoader.cpp">
+      <Filter>Fichiers sources\Utilitaires</Filter>
+    </ClCompile>
+    <ClCompile Include="scr\RxAnimMesh.cpp">
+      <Filter>Fichiers sources\Opengl</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\RxShader.h">
+      <Filter>Fichiers d%27en-tête\Opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RxFile.h">
+      <Filter>Fichiers d%27en-tête\Utilitaires</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RxLogger.h">
+      <Filter>Fichiers d%27en-tête\Utilitaires</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RxMath3D.h">
+      <Filter>Fichiers d%27en-tête\Utilitaires</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RxCamera.h">
+      <Filter>Fichiers d%27en-tête\Opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RxEngine.h">
+      <Filter>Fichiers d%27en-tête\Opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RxFPS.h">
+      <Filter>Fichiers d%27en-tête\Utilitaires</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RxTexManager.h">
+      <Filter>Fichiers d%27en-tête\Opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RxConst.h">
+      <Filter>Fichiers d%27en-tête\Utilitaires</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RxTools.h">
+      <Filter>Fichiers d%27en-tête\Utilitaires</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RxMesh.h">
+      <Filter>Fichiers d%27en-tête\Opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RxSimpleMesh.h">
+      <Filter>Fichiers d%27en-tête\Opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RxObject3D.h">
+      <Filter>Fichiers d%27en-tête\Opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RxTreeStruct.h">
+      <Filter>Fichiers d%27en-tête\Utilitaires</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RxFont.h">
+      <Filter>Fichiers d%27en-tête\Utilitaires</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RxWindow.h">
+      <Filter>Fichiers d%27en-tête\Opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RxGUI.h">
+      <Filter>Fichiers d%27en-tête\Opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RxFBO.h">
+      <Filter>Fichiers d%27en-tête\Opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RxSkyBox.h">
+      <Filter>Fichiers d%27en-tête\Opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RxHeightMap.h">
+      <Filter>Fichiers d%27en-tête\Opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RxQuadTree.h">
+      <Filter>Fichiers d%27en-tête\Utilitaires</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RxProceduralTexture.h">
+      <Filter>Fichiers d%27en-tête\Utilitaires</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RxCulling.h">
+      <Filter>Fichiers d%27en-tête\Opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="tests.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RxVBO.h">
+      <Filter>Fichiers d%27en-tête\Opengl</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RxAssimpLoader.h">
+      <Filter>Fichiers d%27en-tête\Utilitaires</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RxSingleton.h">
+      <Filter>Fichiers d%27en-tête\Utilitaires</Filter>
+    </ClInclude>
+    <ClInclude Include="include\RxAnimMesh.h">
+      <Filter>Fichiers d%27en-tête\Opengl</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\basique.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\basique.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\basique_2D.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\couleurs.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\couleurs.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\couleurs_2D.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\texture.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\texture.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\font.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\font.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\item2d.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\item2d.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\skybox.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\skybox.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Rxlogger.log">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
+    <None Include="Shaders\geometry.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\geometry.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\hterrain3.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\hterrain3.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\shadowvolume.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\shadowvolume.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\shadowquad.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\shadowquad.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\animmesh.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\animmesh.vert">
+      <Filter>Shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>
